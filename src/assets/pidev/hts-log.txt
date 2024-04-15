@@ -1,0 +1,13 @@
+HTTrack3.49-2+htsswf+htsjava launched on Mon, 15 Apr 2024 23:28:32 at https://themes.potenzaglobalsolutions.com/html/finaxo/index-02.html +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "fr, en, *" https://themes.potenzaglobalsolutions.com/html/finaxo/index-02.html -O1 "C:\Mes Sites Web\pidev" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+23:29:25	Error: 	"Not Found" (404) at link https://themes.potenzaglobalsolutions.com/html/finaxo/css/owl-carousel/owl.video.play.png (from https://themes.potenzaglobalsolutions.com/html/finaxo/css/owl-carousel/owl.carousel.min.css)
+23:29:26	Error: 	"Not Found" (404) at link https://themes.potenzaglobalsolutions.com/html/finaxo/blog.html (from https://themes.potenzaglobalsolutions.com/html/finaxo/blog-single.html)
+
+HTTrack Website Copier/3.49-2 mirror complete in 54 seconds : 217 links scanned, 214 files written (20209850 bytes overall) [17978027 bytes received at 332926 bytes/sec], 2914954 bytes transferred using HTTP compression in 76 files, ratio 20%, 72.3 requests per connection
+(2 errors, 0 warnings, 0 messages)

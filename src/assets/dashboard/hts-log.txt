@@ -1,0 +1,22 @@
+HTTrack3.49-2+htsswf+htsjava launched on Mon, 15 Apr 2024 22:28:31 at https://templates.iqonic.design/findash/html/index.html +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "fr, en, *" https://templates.iqonic.design/findash/html/index.html -O1 "C:\Mes Sites Web\dashboard" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+22:30:09	Error: 	"Not Found" (404) at link https://templates.iqonic.design/findash/html/pages-map.html (from https://templates.iqonic.design/findash/html/horizontal-menu.html)
+22:30:09	Error: 	"Not Found" (404) at link https://templates.iqonic.design/findash/html/product.html (from https://templates.iqonic.design/findash/html/horizontal-menu.html)
+22:30:09	Error: 	"Not Found" (404) at link https://templates.iqonic.design/findash/html/itemdetails.html (from https://templates.iqonic.design/findash/html/horizontal-menu.html)
+22:30:09	Error: 	"Not Found" (404) at link https://templates.iqonic.design/findash/html/checkout.html (from https://templates.iqonic.design/findash/html/horizontal-menu.html)
+22:30:09	Error: 	"Not Found" (404) at link https://templates.iqonic.design/findash/html/app/images/logo.png (from https://templates.iqonic.design/findash/html/app/index.html)
+22:30:09	Error: 	"Not Found" (404) at link https://templates.iqonic.design/findash/html/app/profile.html (from https://templates.iqonic.design/findash/html/app/index.html)
+22:30:09	Error: 	"Not Found" (404) at link https://templates.iqonic.design/findash/html/app/profile-edit.html (from https://templates.iqonic.design/findash/html/app/index.html)
+22:30:09	Error: 	"Not Found" (404) at link https://templates.iqonic.design/findash/html/app/account-setting.html (from https://templates.iqonic.design/findash/html/app/index.html)
+22:30:09	Error: 	"Not Found" (404) at link https://templates.iqonic.design/findash/html/app/privacy-setting.html (from https://templates.iqonic.design/findash/html/app/index.html)
+22:30:09	Error: 	"Not Found" (404) at link https://templates.iqonic.design/findash/html/app/sign-in.html (from https://templates.iqonic.design/findash/html/app/index.html)
+22:30:09	Error: 	"Not Found" (404) at link https://templates.iqonic.design/findash/html/app/dummy@FinDash.com (from https://templates.iqonic.design/findash/html/app/index.html)
+
+HTTrack Website Copier/3.49-2 mirror complete in 1 minutes 45 seconds : 305 links scanned, 293 files written (39938551 bytes overall) [28240384 bytes received at 268956 bytes/sec], 16257668 bytes transferred using HTTP compression in 178 files, ratio 26%, 76.2 requests per connection
+(11 errors, 0 warnings, 0 messages)

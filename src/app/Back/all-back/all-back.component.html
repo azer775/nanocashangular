@@ -1,83 +1,145 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
+   
+<!-- Mirrored from templates.iqonic.design/findash/html/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Apr 2024 21:28:33 GMT -->
 <head>
-    <meta charset="utf-8">
-    <title>DASHMIN - Bootstrap Admin Template</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>FinDash - Responsive Bootstrap 4 Admin Dashboard Template</title>
+      <!-- Favicon -->
+      
+      <link rel="shortcut icon" href="/assets/dashboard/templates.iqonic.design/findash/html/images/favicon.ico" />
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="/assets/dashboard/templates.iqonic.design/findash/html/css/bootstrap.min.css">
+      <!-- Typography CSS -->
+      <link rel="stylesheet" href="/assets/dashboard/templates.iqonic.design/findash/html/css/typography.css">
+      <!-- Style CSS -->
+      <link rel="stylesheet" href="/assets/dashboard/templates.iqonic.design/findash/html/css/style.css">
+      <!-- Responsive CSS -->
+      <link rel="stylesheet" href="/assets/dashboard/templates.iqonic.design/findash/html/css/responsive.css">
+      <!-- Full calendar -->
+      <link href='/assets/dashboard/templates.iqonic.design/findash/html/fullcalendar/core/main.css' rel='stylesheet' />
+      <link href='/assets/dashboard/templates.iqonic.design/findash/html/fullcalendar/daygrid/main.css' rel='stylesheet' />
+      <link href='/assets/dashboard/templates.iqonic.design/findash/html/fullcalendar/timegrid/main.css' rel='stylesheet' />
+      <link href='/assets/dashboard/templates.iqonic.design/findash/html/fullcalendar/list/main.css' rel='stylesheet' />
 
-    <!-- Favicon -->
-    <link href="/assets/dashmin-1.0.0/img/favicon.ico" rel="icon">
+      <link rel="stylesheet" href="/assets/dashboard/templates.iqonic.design/findash/html/css/flatpickr.min.css">
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="/assets/dashmin-1.0.0/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="/assets/dashmin-1.0.0/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="/assets/dashmin-1.0.0/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
-    <link href="/assets/dashmin-1.0.0/css/style.css" rel="stylesheet">
-</head>
-
-<body>
-    <div class="container-xxl position-relative bg-white d-flex p-0">
-        <!-- Spinner Start -->
-        <!-- <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-        </div> -->
-        <!-- Spinner End -->
-
-
-        <!-- Sidebar Start -->
-        <app-sidebar></app-sidebar>
-        <!-- Sidebar End -->
-
-
-        <!-- Content Start -->
-        <div class="content">
-            <!-- Navbar Start -->
-            <app-navbar></app-navbar>
-            <!-- Navbar End -->
-
-
-            <!-- Footer Start -->
-            <app-footer></app-footer>
-            <!-- Footer End -->
+   </head>
+   <body>
+      <!-- loader Start -->
+      <!-- <div id="loading">
+         <div id="loading-center">
+         </div>
+      </div> -->
+      <!-- loader END -->
+      <!-- Wrapper Start -->
+      <div class="wrapper">
+         <!-- Sidebar  -->
+         <app-sidebar></app-sidebar>
+         <!-- Sidebar END  -->
+         <!-- TOP Nav Bar -->
+         <app-navbar></app-navbar>
+         <!-- TOP Nav Bar END -->
+         
+         <!-- Page Content  -->
+         <router-outlet></router-outlet>
+         <!-- <app-homeback></app-homeback> -->
+      </div>
+      <!-- Wrapper END -->
+      <!-- Footer -->
+      <app-footer></app-footer>
+      <!-- Footer END -->
+      <!-- color-customizer -->
+       <div class="iq-colorbox color-fix">
+         <div class="buy-button"> <a class="color-full" href="#"><i class="fa fa-spinner fa-spin"></i></a> </div>
+         <div id="right-sidebar-scrollbar" class="iq-colorbox-inner">
+           <div class="clearfix color-picker">
+               <h3 class="iq-font-black">FinDash Awesome Color</h3>
+               <p>This color combo available inside whole template. You can change on your wish, Even you can create your own with limitless possibilities! </p>
+               <ul class="iq-colorselect clearfix">
+                   <li class="color-1 iq-colormark" data-style="color-1"></li>
+                   <li class="color-2" data-style="iq-color-2"></li>
+                   <li class="color-3" data-style="iq-color-3"></li>
+                   <li class="color-4" data-style="iq-color-4"></li>
+                   <li class="color-5" data-style="iq-color-5"></li>
+                   <li class="color-6" data-style="iq-color-6"></li>
+                   <li class="color-7" data-style="iq-color-7"></li>
+                   <li class="color-8" data-style="iq-color-8"></li>
+                   <li class="color-9" data-style="iq-color-9"></li>
+                   <li class="color-10" data-style="iq-color-10"></li>
+                   <li class="color-11" data-style="iq-color-11"></li>
+                   <li class="color-12" data-style="iq-color-12"></li>
+                   <li class="color-13" data-style="iq-color-13"></li>
+                   <li class="color-14" data-style="iq-color-14"></li>
+                   <li class="color-15" data-style="iq-color-15"></li>
+                   <li class="color-16" data-style="iq-color-16"></li>
+                   <li class="color-17" data-style="iq-color-17"></li>
+                   <li class="color-18" data-style="iq-color-18"></li>
+                   <li class="color-19" data-style="iq-color-19"></li>
+                   <li class="color-20" data-style="iq-color-20"></li>
+               </ul>
+               <a target="_blank" class="btn btn-primary d-block mt-3" href="#">Purchase Now</a>
+           </div>
         </div>
-        <!-- Content End -->
+       </div>
+       <!-- color-customizer END -->
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="/assets/dashboard/templates.iqonic.design/findash/html/js/jquery.min.js"></script>
+      <script src="/assets/dashboard/templates.iqonic.design/findash/html/js/popper.min.js"></script>
+      <script src="/assets/dashboard/templates.iqonic.design/findash/html/js/bootstrap.min.js"></script>
+      <!-- Appear JavaScript -->
+      <script src="/assets/dashboard/templates.iqonic.design/findash/html/js/jquery.appear.js"></script>
+      <!-- Countdown JavaScript -->
+      <script src="/assets/dashboard/templates.iqonic.design/findash/html/js/countdown.min.js"></script>
+      <!-- Counterup JavaScript -->
+      <script src="/assets/dashboard/templates.iqonic.design/findash/html/js/waypoints.min.js"></script>
+      <script src="/assets/dashboard/templates.iqonic.design/findash/html/js/jquery.counterup.min.js"></script>
+      <!-- Wow JavaScript -->
+      <script src="/assets/dashboard/templates.iqonic.design/findash/html/js/wow.min.js"></script>
+      <!-- Apexcharts JavaScript -->
+      <script src="/assets/dashboard/templates.iqonic.design/findash/html/js/apexcharts.js"></script>
+      <!-- Slick JavaScript -->
+      <script src="/assets/dashboard/templates.iqonic.design/findash/html/js/slick.min.js"></script>
+      <!-- Select2 JavaScript -->
+      <script src="/assets/dashboard/templates.iqonic.design/findash/html/js/select2.min.js"></script>
+      <!-- Owl Carousel JavaScript -->
+      <script src="/assets/dashboard/templates.iqonic.design/findash/html/js/owl.carousel.min.js"></script>
+      <!-- Magnific Popup JavaScript -->
+      <script src="/assets/dashboard/templates.iqonic.design/findash/html/js/jquery.magnific-popup.min.js"></script>
+      <!-- Smooth Scrollbar JavaScript -->
+      <script src="/assets/dashboard/templates.iqonic.design/findash/html/js/smooth-scrollbar.js"></script>
+      <!-- lottie JavaScript -->
+      <script src="/assets/dashboard/templates.iqonic.design/findash/html/js/lottie.js"></script>
+      <!-- am core JavaScript -->
+      <script src="/assets/dashboard/templates.iqonic.design/findash/html/js/core.js"></script>
+      <!-- am charts JavaScript -->
+      <script src="/assets/dashboard/templates.iqonic.design/findash/html/js/charts.js"></script>
+      <!-- am animated JavaScript -->
+      <script src="/assets/dashboard/templates.iqonic.design/findash/html/js/animated.js"></script>
+      <!-- am kelly JavaScript -->
+      <script src="/assets/dashboard/templates.iqonic.design/findash/html/js/kelly.js"></script>
+      <!-- am maps JavaScript -->
+      <script src="/assets/dashboard/templates.iqonic.design/findash/html/js/maps.js"></script>
+      <!-- am worldLow JavaScript -->
+      <script src="/assets/dashboard/templates.iqonic.design/findash/html/js/worldLow.js"></script>
+      <!-- Raphael-min JavaScript -->
+      <script src="/assets/dashboard/templates.iqonic.design/findash/html/js/raphael-min.js"></script>
+      <!-- Morris JavaScript -->
+      <script src="/assets/dashboard/templates.iqonic.design/findash/html/js/morris.js"></script>
+      <!-- Morris min JavaScript -->
+      <script src="/assets/dashboard/templates.iqonic.design/findash/html/js/morris.min.js"></script>
+      <!-- Flatpicker Js -->
+      <script src="/assets/dashboard/templates.iqonic.design/findash/html/js/flatpickr.js"></script>
+      <!-- Style Customizer -->
+      <script src="/assets/dashboard/templates.iqonic.design/findash/html/js/style-customizer.js"></script>
+      <!-- Chart Custom JavaScript -->
+      <script src="/assets/dashboard/templates.iqonic.design/findash/html/js/chart-custom.js"></script>
+      <!-- Custom JavaScript -->
+      <script src="/assets/dashboard/templates.iqonic.design/findash/html/js/custom.js"></script>
+   </body>
 
-
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-    </div>
-
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/assets/dashmin-1.0.0/lib/chart/chart.min.js"></script>
-    <script src="/assets/dashmin-1.0.0/lib/easing/easing.min.js"></script>
-    <script src="/assets/dashmin-1.0.0/lib/waypoints/waypoints.min.js"></script>
-    <script src="/assets/dashmin-1.0.0/lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="/assets/dashmin-1.0.0/lib/tempusdominus/js/moment.min.js"></script>
-    <script src="/assets/dashmin-1.0.0/lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="/assets/dashmin-1.0.0/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="/assets/dashmin-1.0.0/js/main.js"></script>
-</body>
-
+<!-- Mirrored from templates.iqonic.design/findash/html/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Apr 2024 21:29:10 GMT -->
 </html>
