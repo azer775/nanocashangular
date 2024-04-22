@@ -12,7 +12,10 @@ import { FooterComponent } from './Back/footer/footer.component';
 import { NavbarComponent } from './Back/navbar/navbar.component';
 import { HomebackComponent } from './Back/homeback/homeback.component';
 import { HomeComponent } from './Front/home/home.component';
-
+import {HttpClientModule } from '@angular/common/http';
+import { PacksComponent } from './Back/packs/packs.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormpackComponent } from './Back/formpack/formpack.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,11 +27,15 @@ import { HomeComponent } from './Front/home/home.component';
     FooterComponent,
     NavbarComponent,
     HomebackComponent,
-    HomeComponent
+    HomeComponent,
+    PacksComponent,
+    FormpackComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,72 @@
+<div class="iq-card">
+  <div class="iq-card-header d-flex justify-content-between">
+    <div class="iq-header-title">
+    <h4 class="card-title">Add Pack</h4>
+  </div>
+</div>
+<div class="iq-card-body">
+<form [formGroup]="packForm" (ngSubmit)="addPack()">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" formControlName="name" class="form-control">
+      <!-- <div *ngIf="packForm.get('name').invalid && packForm.get('name').touched">
+        <span *ngIf="packForm.get('name').errors.required">Name is required.</span>
+      </div> -->
+    </div>
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <textarea id="description" formControlName="description" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="interest">Interest:</label>
+      <input type="number" id="interest" formControlName="interest" class="form-control">
+      <!-- <div *ngIf="packForm.get('interest').invalid && packForm.get('interest').touched">
+        <span *ngIf="packForm.get('interest').errors.required">Interest is required.</span>
+      </div> -->
+    </div>
+    <div class="form-group">
+      <label for="max">Max:</label>
+      <input type="number" id="max" formControlName="max" class="form-control">
+      <!-- <div *ngIf="packForm.get('max').invalid && packForm.get('max').touched">
+        <span *ngIf="packForm.get('max').errors.required">Max is required.</span>
+      </div> -->
+    </div>
+    <div class="form-group">
+      <label for="min">Min:</label>
+      <input type="number" id="min" formControlName="min" class="form-control">
+      <!-- <div *ngIf="packForm.get('min').invalid && packForm.get('min').touched">
+        <span *ngIf="packForm.get('min').errors.required">Min is required.</span>
+      </div> -->
+    </div>
+    <div class="form-group">
+      <label for="target">Target:</label>
+      <input type="text" id="target" formControlName="target" class="form-control">
+     <!--  <div *ngIf="packForm.get('target').invalid && packForm.get('target').touched">
+        <span *ngIf="packForm.get('target').errors.required">Target is required.</span>
+      </div> -->
+    </div>
+    <div class="form-group">
+        <label for="bankstat">Bankstat:</label>
+        <input type="checkbox" id="bankstat" formControlName="bankstat" >
+      </div>
+      <div class="form-group">
+        <label for="cin">Cin:</label>
+        <input type="checkbox" id="cin" formControlName="cin" class="custom-control-input">
+      </div>
+      <div class="form-group">
+        <label for="diplomat">Diploma:</label>
+        <input type="checkbox" id="diploma" formControlName="diploma" class="custom-control-input">
+      </div>
+      <div class="form-group">
+        <label for="possession">Possession:</label>
+        <input type="checkbox" id="possession" formControlName="possession" class="custom-control-input">
+      </div>
+      <div class="form-group">
+        <label for="work">Work:</label>
+        <input type="checkbox" id="work" formControlName="work" class="custom-control-input">
+      </div>
+    <!-- Add more form fields for other attributes as needed -->
+    <button type="submit" [disabled]="packForm.invalid" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+</div>

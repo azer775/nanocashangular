@@ -4,6 +4,8 @@ import { AllFrontComponent } from './Front/all-front/all-front.component';
 import { HomeComponent } from './Front/home/home.component';
 import { AllBackComponent } from './Back/all-back/all-back.component';
 import { HomebackComponent } from './Back/homeback/homeback.component';
+import { PacksComponent } from './Back/packs/packs.component';
+import { FormpackComponent } from './Back/formpack/formpack.component';
 
 const routes: Routes = [
   { path: "",
@@ -18,10 +20,18 @@ children:[
 },
 { path: "admin",
 component: AllBackComponent,
-children:[{
+children:[
+{
   path: "dashboard",
   component: HomebackComponent
-}]
+},
+{ path: "packs",
+  component: PacksComponent
+},
+{ path: "addpack",
+  component: FormpackComponent
+}
+]
 
 }
 ];
