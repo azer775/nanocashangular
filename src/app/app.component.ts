@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { PackService } from './Services/pack.service';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +7,4 @@ import { PackService } from './Services/pack.service';
 })
 export class AppComponent {
   title = 'nanocash1';
-  
 }
