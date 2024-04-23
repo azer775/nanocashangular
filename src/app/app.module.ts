@@ -12,6 +12,11 @@ import { FooterComponent } from './Back/footer/footer.component';
 import { NavbarComponent } from './Back/navbar/navbar.component';
 import { HomebackComponent } from './Back/homeback/homeback.component';
 import { HomeComponent } from './Front/home/home.component';
+import { AddInsComponent } from './Components/add-ins/add-ins.component';
+import { EditInsComponent } from './Components/edit-ins/edit-ins.component';
+import { ShowInsComponent } from './Components/show-ins/show-ins.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,11 +29,16 @@ import { HomeComponent } from './Front/home/home.component';
     FooterComponent,
     NavbarComponent,
     HomebackComponent,
-    HomeComponent
+    HomeComponent,
+    AddInsComponent,
+    EditInsComponent,
+    ShowInsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

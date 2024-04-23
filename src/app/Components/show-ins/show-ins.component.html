@@ -1,0 +1,56 @@
+
+
+
+    /////////////////////
+    <div id="content-page" class="content-page">
+        <div class="container-fluid">
+           <div class="row">
+              <div class="col-lg-18">
+                <div class="col-sm-12">
+                    <div class="iq-card iq-card-block iq-card-stretch iq-card-height">
+                    <div class="iq-card-header d-flex justify-content-between">
+                    <div class="iq-header-title">
+                        <h4 class="card-title"> Insurance List</h4>
+                    </div>
+                    <div class="iq-card-header-toolbar d-flex align-items-center">
+                 <div class="dropdown">
+                    <span class="dropdown-toggle" id="dropdownMenuButton2" data-toggle="dropdown">
+                    <i class="ri-more-fill"></i>
+                    </span>
+                   
+                 </div>
+              </div>
+           </div>
+           <div class="iq-card-body">
+              <div class="table-responsive">
+                 <!-- HTML -->
+<table class="table mb-0 table-borderless table-striped">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nom</th>
+            <th scope="col">Description</th>
+            <th scope="col">Type d'Assurance</th>
+            <th scope="col">Conditions</th>
+            <th scope="col">Evenements assures</th>
+            <th scope="col">Exlusions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let i of listIns; let even = even; let odd = odd">
+            <td>{{i.id_ass}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.description}}</td>
+            <td>{{i.event_ass}}</td>
+            <td>{{i.conditions}}</td>
+            <td>{{i.exclusions}}</td>
+            <td>{{i.typeAss}}</td>
+        </tr>
+    </tbody>
+</table>
+ 
+            </div>
+        </div>
+    </div>
+</div>       
+         

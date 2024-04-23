@@ -1,0 +1,68 @@
+<div id="content-page" class="content-page">
+    <div class="container-fluid">
+       <div class="row">
+          <div class="col-sm-20 col-lg-16">
+            </div>
+      <div class="col-lg-9">
+   <div class="iq-card">
+      <div class="iq-card-header d-flex justify-content-between">
+         <div class="iq-header-title">
+            <h4 class="card-title">Ajouter une assurance</h4>
+         </div>
+      </div>
+      <div class="iq-card-body">
+         <div class="new-user-info">
+            <form [formGroup] ="insForm" (ngSubmit)="addIns()">
+               <div class="row">
+                  <div class="form-group col-md-6">
+                     <label for="fname">Nom d'Assurance :</label>
+                     <input type="text" formControlName="name" placeholder="Name" class="form-control" >
+                  </div>
+                  <div class="form-group col-md-6">
+                     <label for="add1">Plafond :</label>
+                     <input type="number" formControlName="ceiling" placeholder="Ceiling" class="form-control">
+                  </div>
+                  <div class="form-group col-sm-6">
+                     <label>Type d'assurance :</label>
+                     <select class="form-control" id="typeAss" formControlName="typeAss">
+                        <option value="VOITURE">Voiture</option>
+                        <option value="BATEAU">Bateau</option>
+                        <option value="SANTE">Santé</option>
+                        <option value="VOYAGE">Voyage</option>
+                        <option value="HABITATION">Habitation</option>
+                        <option value="RESPONSABILITE_CIVILE">Responsabilité civile</option>
+                        <option value="ENTREPRISE">Entreprise</option>
+                        <option value="INVALIDITE">Invalidité</option>
+                        <option value="SCOLARITE">Scolarité</option>
+                        <option value="VIE">Vie</option>
+                        <option value="CREDIT">Crédit</option>
+                      </select>
+                  </div>
+                  <div class="form-group col-md-6">
+                     <label for="add2">Evenements assurés :</label>
+                     <textarea id="event_ass" formControlName="event_ass" class="form-control" placeholder="Evenements"></textarea>
+                  </div>
+                  <div class="form-group col-md-6">
+                     <label for="cname">Conditions :</label>
+                     <textarea id="conditions" formControlName="conditions" class="form-control" placeholder="Coniditions"></textarea>
+                  </div>
+                  <div class="form-group col-md-6">
+                     <label for="mobno">Exclusions :</label>
+                     <textarea id="exclusions" formControlName="exclusions" class="form-control" placeholder="Exlusions"></textarea>
+                  </div>
+
+                  <div class="form-group col-md-12">
+                     <label for="lname">Description :</label>
+                     <textarea id="description" formControlName="description" class="form-control" placeholder="Description"></textarea>
+                  </div>
+               </div>
+               <button type="submit" [disabled]="insForm.invalid" class="btn btn-primary">Ajouter</button>
+            </form>
+         </div>
+      </div>
+   </div>
+</div>
+</div>
+
+
+

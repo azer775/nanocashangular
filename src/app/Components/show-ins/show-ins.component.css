@@ -1,0 +1,7 @@
+.table-striped tbody tr:nth-child(odd) {
+    background-color: lightskyblue; /* Your default color */
+}
+
+.table-striped tbody tr:nth-child(even) {
+    background-color: #769fe6; /* Light blue color */
+} 
