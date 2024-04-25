@@ -36,9 +36,11 @@ export class FormpackComponent implements OnInit {
     if (this.packForm.valid) {
         const pack : Pack = this.packForm.value as Pack;
         this.packService.addPack(pack).subscribe(()=>{
-          this.router.navigateByUrl('/admin/packs');
+          
         })
+        this.router.navigateByUrl('/admin/packs');    
   }
+  
 }
   
 

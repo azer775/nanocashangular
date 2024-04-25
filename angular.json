@@ -25,9 +25,46 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/dashboard/templates.iqonic.design/findash/html/css/bootstrap.min.css",
+              "src/assets/dashboard/templates.iqonic.design/findash/html/css/typography.css",
+              "src/assets/dashboard/templates.iqonic.design/findash/html/css/style.css",
+              "src/assets/dashboard/templates.iqonic.design/findash/html/css/responsive.css",
+              "src/assets/dashboard/templates.iqonic.design/findash/html/fullcalendar/core/main.css",
+              "src/assets/dashboard/templates.iqonic.design/findash/html/fullcalendar/daygrid/main.css",
+              "src/assets/dashboard/templates.iqonic.design/findash/html/fullcalendar/timegrid/main.css",
+              "src/assets/dashboard/templates.iqonic.design/findash/html/fullcalendar/list/main.css",
+              "src/assets/dashboard/templates.iqonic.design/findash/html/css/flatpickr.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/dashboard/templates.iqonic.design/findash/html/js/jquery.min.js",
+              "src/assets/dashboard/templates.iqonic.design/findash/html/js/popper.min.js",
+              "src/assets/dashboard/templates.iqonic.design/findash/html/js/bootstrap.min.js",
+              "src/assets/dashboard/templates.iqonic.design/findash/html/js/countdown.min.js",
+              "src/assets/dashboard/templates.iqonic.design/findash/html/js/waypoints.min.js",
+              "src/assets/dashboard/templates.iqonic.design/findash/html/js/jquery.counterup.min.js",
+              "src/assets/dashboard/templates.iqonic.design/findash/html/js/wow.min.js",
+              "src/assets/dashboard/templates.iqonic.design/findash/html/js/apexcharts.js",
+              "src/assets/dashboard/templates.iqonic.design/findash/html/js/slick.min.js",
+              "src/assets/dashboard/templates.iqonic.design/findash/html/js/select2.min.js",
+              "src/assets/dashboard/templates.iqonic.design/findash/html/js/owl.carousel.min.js",
+              "src/assets/dashboard/templates.iqonic.design/findash/html/js/jquery.magnific-popup.min.js",
+              "src/assets/dashboard/templates.iqonic.design/findash/html/js/smooth-scrollbar.js",
+              "src/assets/dashboard/templates.iqonic.design/findash/html/js/lottie.js",
+              "src/assets/dashboard/templates.iqonic.design/findash/html/js/core.js",
+              "src/assets/dashboard/templates.iqonic.design/findash/html/js/charts.js",
+              "src/assets/dashboard/templates.iqonic.design/findash/html/js/animated.js",
+              "src/assets/dashboard/templates.iqonic.design/findash/html/js/kelly.js",
+              "src/assets/dashboard/templates.iqonic.design/findash/html/js/maps.js",
+              "src/assets/dashboard/templates.iqonic.design/findash/html/js/worldLow.js",
+              "src/assets/dashboard/templates.iqonic.design/findash/html/js/raphael-min.js",
+              "src/assets/dashboard/templates.iqonic.design/findash/html/js/morris.js",
+              "src/assets/dashboard/templates.iqonic.design/findash/html/js/morris.min.js",
+              "src/assets/dashboard/templates.iqonic.design/findash/html/js/flatpickr.js",
+              "src/assets/dashboard/templates.iqonic.design/findash/html/js/style-customizer.js",
+              "src/assets/dashboard/templates.iqonic.design/findash/html/js/chart-custom.js",
+              "src/assets/dashboard/templates.iqonic.design/findash/html/js/custom.js"  
+            ]
           },
           "configurations": {
             "production": {
@@ -89,7 +126,31 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [ "src/assets/dashboard/templates.iqonic.design/findash/html/js/jquery.appear.js",
+            "src/assets/dashboard/templates.iqonic.design/findash/html/js/countdown.min.js",
+            "src/assets/dashboard/templates.iqonic.design/findash/html/js/waypoints.min.js",
+            "src/assets/dashboard/templates.iqonic.design/findash/html/js/jquery.counterup.min.js",
+            "src/assets/dashboard/templates.iqonic.design/findash/html/js/wow.min.js",
+            "src/assets/dashboard/templates.iqonic.design/findash/html/js/apexcharts.js",
+            "src/assets/dashboard/templates.iqonic.design/findash/html/js/slick.min.js",
+            "src/assets/dashboard/templates.iqonic.design/findash/html/js/select2.min.js",
+            "src/assets/dashboard/templates.iqonic.design/findash/html/js/owl.carousel.min.js",
+            "src/assets/dashboard/templates.iqonic.design/findash/html/js/jquery.magnific-popup.min.js",
+            "src/assets/dashboard/templates.iqonic.design/findash/html/js/smooth-scrollbar.js",
+            "src/assets/dashboard/templates.iqonic.design/findash/html/js/lottie.js",
+            "src/assets/dashboard/templates.iqonic.design/findash/html/js/core.js",
+            "src/assets/dashboard/templates.iqonic.design/findash/html/js/charts.js",
+            "src/assets/dashboard/templates.iqonic.design/findash/html/js/animated.js",
+            "src/assets/dashboard/templates.iqonic.design/findash/html/js/kelly.js",
+            "src/assets/dashboard/templates.iqonic.design/findash/html/js/maps.js",
+            "src/assets/dashboard/templates.iqonic.design/findash/html/js/worldLow.js",
+            "src/assets/dashboard/templates.iqonic.design/findash/html/js/raphael-min.js",
+            "src/assets/dashboard/templates.iqonic.design/findash/html/js/morris.js",
+            "src/assets/dashboard/templates.iqonic.design/findash/html/js/morris.min.js",
+            "src/assets/dashboard/templates.iqonic.design/findash/html/js/flatpickr.js",
+            "src/assets/dashboard/templates.iqonic.design/findash/html/js/style-customizer.js",
+            "src/assets/dashboard/templates.iqonic.design/findash/html/js/chart-custom.js",
+            "src/assets/dashboard/templates.iqonic.design/findash/html/js/custom.js"]
           }
         }
       }
