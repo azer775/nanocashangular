@@ -6,6 +6,7 @@ import { AllBackComponent } from './Back/all-back/all-back.component';
 import { HomebackComponent } from './Back/homeback/homeback.component';
 import { PacksComponent } from './Back/packs/packs.component';
 import { FormpackComponent } from './Back/formpack/formpack.component';
+import { FormContractComponent } from './Back/formContract/formContract.component';
 
 const routes: Routes = [
   { path: "",
@@ -30,6 +31,9 @@ children:[
 },
 { path: "addpack",
   component: FormpackComponent
+},
+{ path: "addcontract",
+  component: FormContractComponent
 }
 ]
 

@@ -16,6 +16,7 @@ import {HttpClientModule } from '@angular/common/http';
 import { PacksComponent } from './Back/packs/packs.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormpackComponent } from './Back/formpack/formpack.component';
+import { FormContractComponent } from './Back/formContract/formContract.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +30,8 @@ import { FormpackComponent } from './Back/formpack/formpack.component';
     HomebackComponent,
     HomeComponent,
     PacksComponent,
-    FormpackComponent
+    FormpackComponent,
+    FormContractComponent
   ],
   imports: [
     BrowserModule,
