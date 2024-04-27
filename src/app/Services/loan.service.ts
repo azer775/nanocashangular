@@ -1,9 +1,45 @@
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Loan } from '../Models/Loan';
+import { Observable } from 'rxjs/internal/Observable';
+import { catchError, throwError } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoanService {
 
-  constructor() { }
+  private baseURL: string ="http://localhost:8080/loan/";
+
+  constructor(private http:HttpClient) {
+
+   }
+
+   findAllLoans(): Observable<Loan[]> {
+        return this.http.get<Loan[]>(this.baseURL+"all");
+   }
+   addLoan(loan: Loan): Observable<any> {
+    return this.http.post<Loan>(this.baseURL+"save", loan);
+  }
+  updateLoan(loan: Loan): Observable<any> {
+    return this.http.put<Loan>(this.baseURL+"up", loan);
+  }
+
+  deleteLoan(id: number): Observable<any> {
+    return this.http.delete<any>(this.baseURL+"delete/"+id);
+  }
+
+  getLoanById(id: number): Observable<any> {
+    return this.http.get<Loan>(this.baseURL+"byid/"+id)
+  }
+
+  generateAmortizationTable(montantEmprunte: number, tauxInteretAnnuel: number, dureeMois: number): Observable<any> {
+    return this.http.get<any>(this.baseURL+"generer-tableau-amortissement/"+montantEmprunte+"/"+tauxInteretAnnuel+"/"+dureeMois);
+  }
+
+  generateAmortizationTable1(montantEmprunte: number, tauxInteretAnnuel: number, dureeMois: number): Observable<any> {
+    return this.http.get<any>(this.baseURL+"generer-tableau-amortissement1/"+montantEmprunte+"/"+tauxInteretAnnuel+"/"+dureeMois);
+  }
+ 
 }
