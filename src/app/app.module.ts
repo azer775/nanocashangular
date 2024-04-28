@@ -16,6 +16,11 @@ import {HttpClientModule } from '@angular/common/http';
 import { PacksComponent } from './Back/packs/packs.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormpackComponent } from './Back/formpack/formpack.component';
+import { LoansComponent } from './Back/loans/loans.component';
+import { FormloanComponent } from './Front/formloan/formloan.component';
+import { StatsComponent } from './Back/stats/stats.component';
+import { NgxEchartsModule } from 'ngx-echarts';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,13 +34,25 @@ import { FormpackComponent } from './Back/formpack/formpack.component';
     HomebackComponent,
     HomeComponent,
     PacksComponent,
-    FormpackComponent
+    FormpackComponent,
+    LoansComponent,
+    FormloanComponent,
+    StatsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxEchartsModule.forRoot({
+      /**
+       * This will import all modules from echarts.
+       * If you only need custom modules,
+       * please refer to [Custom Build] section.
+       */
+      echarts: () => import('echarts'), // or import('./path-to-my-custom-echarts')
+    })
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

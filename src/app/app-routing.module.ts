@@ -6,6 +6,8 @@ import { AllBackComponent } from './Back/all-back/all-back.component';
 import { HomebackComponent } from './Back/homeback/homeback.component';
 import { PacksComponent } from './Back/packs/packs.component';
 import { FormpackComponent } from './Back/formpack/formpack.component';
+import { LoansComponent } from './Back/loans/loans.component';
+import { FormloanComponent } from './Front/formloan/formloan.component';
 
 const routes: Routes = [
   { path: "",
@@ -15,6 +17,9 @@ children:[
   path: "home",
  component: HomeComponent
 
+},
+{ path: "loanadd",
+  component: FormloanComponent
 }
 ]
 },
@@ -30,6 +35,9 @@ children:[
 },
 { path: "addpack",
   component: FormpackComponent
+},
+{ path: "loans",
+  component: LoansComponent
 }
 ]
 

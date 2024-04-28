@@ -16,6 +16,7 @@
             <th>min</th>
             <th>interest</th>
             <th>target</th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -27,7 +28,7 @@
             <td>{{pack.min}}</td>
             <td>{{pack.interest}}</td>
             <td>{{pack.target}}</td>
-
+            <td><button (click)="navigateToForm(pack.id)"> modify</button></td>
         </tr>
     </tbody>
 </table>

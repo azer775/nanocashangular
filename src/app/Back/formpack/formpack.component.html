@@ -1,7 +1,7 @@
 <div class="iq-card" >
   <div class="iq-card-header d-flex justify-content-between">
     <div class="iq-header-title">
-    <h4 class="card-title">Add Pack                                  </h4>
+    <h4 class="card-title">Add Pack </h4>
   </div>
 </div>
 <div class="iq-card-body">
@@ -51,22 +51,25 @@
       </div>
       <div class="form-group">
         <label for="cin">Cin:</label>
-        <input type="checkbox" id="cin" formControlName="cin" class="custom-control-input">
+        <input type="checkbox" id="cin" formControlName="cin" >
       </div>
       <div class="form-group">
         <label for="diplomat">Diploma:</label>
-        <input type="checkbox" id="diploma" formControlName="diploma" class="custom-control-input">
+        <input type="checkbox" id="diploma" formControlName="diploma" >
       </div>
       <div class="form-group">
         <label for="possession">Possession:</label>
-        <input type="checkbox" id="possession" formControlName="possession" class="custom-control-input">
+        <input type="checkbox" id="possession" formControlName="possession" >
       </div>
       <div class="form-group">
         <label for="work">Work:</label>
-        <input type="checkbox" id="work" formControlName="work" class="custom-control-input">
+        <input type="checkbox" id="work" formControlName="work" >
       </div>
     <!-- Add more form fields for other attributes as needed -->
     <button type="submit"  class="btn btn-primary">Submit</button>
+    <button type="reset" class="btn btn-primary" (click)="Cancel()">cancel</button>
+    
   </form>
+  
 </div>
 </div>

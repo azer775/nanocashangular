@@ -150,7 +150,10 @@
             "src/assets/dashboard/templates.iqonic.design/findash/html/js/flatpickr.js",
             "src/assets/dashboard/templates.iqonic.design/findash/html/js/style-customizer.js",
             "src/assets/dashboard/templates.iqonic.design/findash/html/js/chart-custom.js",
-            "src/assets/dashboard/templates.iqonic.design/findash/html/js/custom.js"]
+            "src/assets/dashboard/templates.iqonic.design/findash/html/js/custom.js",
+            "https://cdn.jsdelivr.net/npm/chart.js",
+            "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"]
+            
           }
         }
       }
