@@ -13,5 +13,7 @@ export class Loan {
     bankstat!: string;
     state!: string;
     pack!: Pack;
+    idp!: number;
     user!: User;
+    [key: string]: any;
 }

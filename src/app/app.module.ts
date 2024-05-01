@@ -20,6 +20,7 @@ import { LoansComponent } from './Back/loans/loans.component';
 import { FormloanComponent } from './Front/formloan/formloan.component';
 import { StatsComponent } from './Back/stats/stats.component';
 import { NgxEchartsModule } from 'ngx-echarts';
+import { TestfileComponent } from './testfile/testfile.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { NgxEchartsModule } from 'ngx-echarts';
     FormpackComponent,
     LoansComponent,
     FormloanComponent,
-    StatsComponent
+    StatsComponent,
+    TestfileComponent
   ],
   imports: [
     BrowserModule,

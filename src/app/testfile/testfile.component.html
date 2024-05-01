@@ -1,0 +1,29 @@
+<!-- <input type="file" (change)="onFileSelected($event)"> -->
+<form [formGroup]="loanForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="cin">CIN PDF:</label>
+      <input type="file" (change)="onFileChange($event, 'cin')" id="cin">
+    </div>
+    
+    <div>
+        <label for="cin">WORK PDF:</label>
+        <input type="file" (change)="onFileChange($event, 'work')" id="work">
+    </div>
+  
+    <!-- Add similar divs for other file inputs -->
+  
+    <div>
+      <label for="amount">Amount:</label>
+      <input type="number" formControlName="amount" id="amount">
+    </div>
+    <div>
+      <label for="duration">Duration (in months):</label>
+      <input type="number" formControlName="duration" id="duration">
+    </div>
+    <div>
+      <label for="start">Start Date:</label>
+      <input type="date" formControlName="start" id="start">
+    </div>
+    
+    <button type="submit">Submit</button>
+  </form>

@@ -1,10 +1,11 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Loan } from 'src/app/Models/Loan';
 import { Pack } from 'src/app/Models/Pack';
 import { role, status, User } from 'src/app/Models/Userazer';
 import { LoanService } from 'src/app/Services/loan.service';
+import { Observer } from 'rxjs';
 
 @Component({
   selector: 'app-formloan',
@@ -13,10 +14,12 @@ import { LoanService } from 'src/app/Services/loan.service';
 })
 export class FormloanComponent implements OnInit {
   loanForm: FormGroup;
+  selectedFiles: { [key: string]: File } = {};
+  files: FormData = new FormData();
   selectedPack: Pack = {
     id: 1,
     bankstat: false,
-    cin: false,
+    cin: true,
     diplomat: false,
     possession: false,
     interest: 5.5,
@@ -41,16 +44,16 @@ export class FormloanComponent implements OnInit {
      status: status.Actif
    };// Add a property for the selected pack
 
-  constructor(private formBuilder: FormBuilder, private loanService: LoanService) {
+  constructor(private formBuilder: FormBuilder,private http: HttpClient, private loanService: LoanService) {
     this.loanForm = this.formBuilder.group({
       amount: [''],
       duration: [''],
       start: [''],
       cin: [''],
-      possession: [''],
-      diplomat: [''],
+     // possession: [''],
+      //diplomat: [''],
       work: [''],
-      bankstat: [''],
+      //bankstat: [''],
       state: ['']
       
     });
@@ -58,23 +61,33 @@ export class FormloanComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  onFileSelected(event: any, key: string) {
+    if (event.target.files.length > 0) {
+      const files: any = this.files;
+      files.append(key, event.target.files[0]);
+    }
+  }
   onSubmit() {
     if (this.loanForm.valid) {
       const loanData = this.loanForm.value as Loan;
       loanData.pack=this.selectedPack as Pack;
       this.user.Id=1;
       loanData.user = this.user as User;
-      // You can now send loanData to your backend service for processing
-      /*this.loanService.addLoan(loanData).subscribe(
+      const formData = new FormData();
+      const loan = this.loanForm.value;
+
+      this.loanService.uploadLoanAndFiles(loan, this.files).subscribe(
         response => {
-          // Handle successful response from the backend
-          console.log('Loan added successfully:', response);
+          console.log('Files uploaded successfully', response);
+          // Reset form or perform other actions as needed
+          this.loanForm.reset();
         },
         error => {
-          // Handle errors from the backend
-          console.error('Error adding loan:', error);
+          console.error('Error uploading files', error);
         }
-      );*/ this.loanService.addLoan(loanData).subscribe(()=>{});
+      );
+
+      //this.loanService.addLoan(loanData).subscribe(()=>{});
     } else {
       // Form is invalid, handle validation errors or display message to user
       console.error('Loan form is invalid');

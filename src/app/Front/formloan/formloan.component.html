@@ -2,7 +2,7 @@
   
       <div *ngIf="selectedPack.cin">
         <label for="cin">CIN PDF:</label>
-        <input type="file" formControlName="cin" id="cin" accept="application/pdf">
+        <input type="file" formControlName="cin" id="cin" (change)="onFileSelected($event, 'cin')" enctype="multipart/form-data" >
       </div>
       <div *ngIf="selectedPack.possession">
         <label for="possession">Possession PDF:</label>
@@ -14,7 +14,7 @@
       </div>
       <div *ngIf="selectedPack.work">
         <label for="work">Work PDF:</label>
-        <input type="file" formControlName="work" id="work" accept="application/pdf" onchange="console.log(event.target.files)">
+        <input type="file" formControlName="work" id="work" (change)="onFileSelected($event, 'work')"  onchange="console.log(event.target.files)" enctype="multipart/form-data">
       </div>
       <div *ngIf="selectedPack.bankstat">
         <label for="bankstat">Bank Statement PDF:</label>
@@ -22,7 +22,7 @@
       </div>
       <div >
         <label for="state">State PDF:</label>
-        <input type="file" formControlName="state" id="state" accept="application/pdf">
+        <input type="text" formControlName="state" id="state" >
       </div>
     
     <div>

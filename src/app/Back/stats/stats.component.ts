@@ -1,9 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { EChartsOption } from 'echarts';
-//import { StatService } from 'src/app/Services/stat.service';
-import * as echarts from 'echarts/core';
-import { ThemeOption } from 'ngx-echarts';
-import { StatsData } from 'src/app/Models/StatsData.interface';
 import { StatService } from 'src/app/Services/stat.service';
 
 
@@ -16,7 +12,7 @@ export class StatsComponent implements OnInit {
   months: number[] = [];
   sumWithDateRelNotNull: number[] = [];
   sumWithDateRelNull: number[] = [];
-  option!: EChartsOption;
+  option!: EChartsOption; 
   constructor(private statservice :StatService) { }
   ngOnInit(): void {
     this.statservice.getdata().subscribe((data:any) => {
