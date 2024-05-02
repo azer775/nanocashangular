@@ -2,7 +2,7 @@ export class Pack{
     id!: number;
     bankstat!: boolean;
     cin!: boolean;
-    diplomat!: boolean;
+    diploma!: boolean;
     possession!: boolean;
     interest!: number;
     max!: number;

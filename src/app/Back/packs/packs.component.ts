@@ -28,6 +28,9 @@ this.packService.findAllPacks().subscribe( (Packs :Pack[]) =>{
 navigateToForm(id: number): void {
   this.router.navigate(['/admin/addpack', { Data: JSON.stringify(id) }]);
 }
+navigateToFormloan(id: number): void {
+  this.router.navigate(['/loanadd', { idp: JSON.stringify(id) }]);
+}
 
 
 }

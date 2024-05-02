@@ -1,19 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FileUploadService } from '../Services/file-upload.service';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Pack } from '../Models/Pack';
+import { PackService } from '../Services/pack.service';
+import { ActivatedRoute } from '@angular/router';
+import { Loan } from '../Models/Loan';
+import { LoanService } from '../Services/loan.service';
 
 @Component({
   selector: 'app-testfile',
   templateUrl: './testfile.component.html',
   styleUrls: ['./testfile.component.css']
 })
-export class TestfileComponent {
-  selectedPack: Pack = {
+export class TestfileComponent implements OnInit {
+  isEditing:boolean = false;
+  updatedloan!:Loan;
+  selectedPack!: Pack; /*= {
     id: 1,
-    bankstat: false,
+    bankstat: true,
     cin: true,
-    diplomat: false,
+    diplomat: true,
     possession: false,
     interest: 5.5,
     max: 10000,
@@ -22,7 +28,7 @@ export class TestfileComponent {
     target: "Home Improvement",
     description: "Pack for home improvement loans",
     name: "Home Improvement Pack"
-  }; 
+  }*/; 
   loanForm: FormGroup= this.fb.group({
     cin: [''],
     possession: [''],
@@ -35,8 +41,27 @@ export class TestfileComponent {
     start: ['']
   });;
 
-  constructor(private fb: FormBuilder, private fileUploadService: FileUploadService) {
+  constructor(private fb: FormBuilder, private fileUploadService: FileUploadService,private packService: PackService,private route: ActivatedRoute,private loanservice: LoanService) {
     this.createForm();
+  }
+  ngOnInit(): void {
+      
+
+    this.route.params.subscribe(params => {
+      if (params['Data']) {
+                  this.isEditing = true;
+                 // this.updatedpack$ = this.packService.getbyid(params['id']);
+                  this.loanservice.getLoanById(params['Data']).subscribe((loan: Loan) => {
+                    // Handle the response here, for example, you can assign the pack to a property
+                    this.updatedloan = loan;
+                   this.loanForm.patchValue(this.updatedloan);
+                  });
+                }
+        this.packService.getbyid(params['idp']).subscribe((pack: Pack) => {
+          // Handle the response here, for example, you can assign the pack to a property
+          this.selectedPack = pack;
+        });
+    });
   }
 
   createForm() {
@@ -61,6 +86,7 @@ export class TestfileComponent {
   }
 
   onSubmit() {
+    
     const formData = new FormData();
     const loanData = this.loanForm.value;
     loanData.idp=this.selectedPack.id;
@@ -73,7 +99,17 @@ export class TestfileComponent {
         formData.append(key, loanData[key]);
       }
     });
-
+    if(this.isEditing){
+      loanData.id=this.updatedloan.id;
+      this.loanservice.updatewithFiles(formData).subscribe(
+        response => {
+          console.log('Files uploaded successfully:', response);
+        },
+        error => {
+          console.error('Error uploading files:', error);
+        }
+      );
+    }else{
     this.fileUploadService.uploadFiles3(formData).subscribe(
       response => {
         console.log('Files uploaded successfully:', response);
@@ -81,7 +117,7 @@ export class TestfileComponent {
       error => {
         console.error('Error uploading files:', error);
       }
-    );
+    );}
   }
 
 }

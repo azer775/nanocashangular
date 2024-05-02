@@ -1,14 +1,25 @@
-<!-- <input type="file" (change)="onFileSelected($event)"> -->
 <form [formGroup]="loanForm" (ngSubmit)="onSubmit()">
-    <div>
+    <div *ngIf="selectedPack.cin">
       <label for="cin">CIN PDF:</label>
       <input type="file" (change)="onFileChange($event, 'cin')" id="cin">
     </div>
     
-    <div>
-        <label for="cin">WORK PDF:</label>
+    <div *ngIf="selectedPack.work">
+        <label for="work">WORK PDF:</label>
         <input type="file" (change)="onFileChange($event, 'work')" id="work">
     </div>
+    <div *ngIf="selectedPack.bankstat">
+        <label for="bankstat">BANK PDF:</label>
+        <input type="file" (change)="onFileChange($event, 'bankstat')" id="bankstat">
+    </div>
+    <div *ngIf="selectedPack.diploma">
+      <label for="diploma">Diploma PDF:</label>
+      <input type="file" (change)="onFileChange($event, 'diploma')" id="diploma">
+  </div>
+  <div  *ngIf="selectedPack.possession">
+    <label for="possession">possession PDF:</label>
+    <input type="file" (change)="onFileChange($event, 'possession')" id="possession">
+</div>
   
     <!-- Add similar divs for other file inputs -->
   

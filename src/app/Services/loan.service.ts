@@ -60,8 +60,11 @@ export class LoanService {
     return this.http.delete<any>(this.baseURL+"delete/"+id);
   }
 
-  getLoanById(id: number): Observable<any> {
+  getLoanById(id: number): Observable<Loan> {
     return this.http.get<Loan>(this.baseURL+"byid/"+id)
+  }
+  updatewithFiles(formData: FormData) {
+    return this.http.put(this.baseURL+"updatewithfiles", formData);
   }
 
   generateAmortizationTable(montantEmprunte: number, tauxInteretAnnuel: number, dureeMois: number): Observable<any> {

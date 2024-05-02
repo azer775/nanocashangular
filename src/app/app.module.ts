@@ -14,13 +14,14 @@ import { HomebackComponent } from './Back/homeback/homeback.component';
 import { HomeComponent } from './Front/home/home.component';
 import {HttpClientModule } from '@angular/common/http';
 import { PacksComponent } from './Back/packs/packs.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormpackComponent } from './Back/formpack/formpack.component';
 import { LoansComponent } from './Back/loans/loans.component';
 import { FormloanComponent } from './Front/formloan/formloan.component';
 import { StatsComponent } from './Back/stats/stats.component';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { TestfileComponent } from './testfile/testfile.component';
+import { ChatComponent } from './Back/chat/chat.component';
 
 @NgModule({
   declarations: [
@@ -39,13 +40,15 @@ import { TestfileComponent } from './testfile/testfile.component';
     LoansComponent,
     FormloanComponent,
     StatsComponent,
-    TestfileComponent
+    TestfileComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    FormsModule,
     NgxEchartsModule.forRoot({
       /**
        * This will import all modules from echarts.

@@ -8,6 +8,7 @@ import { PacksComponent } from './Back/packs/packs.component';
 import { FormpackComponent } from './Back/formpack/formpack.component';
 import { LoansComponent } from './Back/loans/loans.component';
 import { FormloanComponent } from './Front/formloan/formloan.component';
+import { TestfileComponent } from './testfile/testfile.component';
 
 const routes: Routes = [
   { path: "",
@@ -19,7 +20,7 @@ children:[
 
 },
 { path: "loanadd",
-  component: FormloanComponent
+  component: TestfileComponent
 }
 ]
 },

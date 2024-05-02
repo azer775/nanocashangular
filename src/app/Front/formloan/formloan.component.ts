@@ -20,7 +20,7 @@ export class FormloanComponent implements OnInit {
     id: 1,
     bankstat: false,
     cin: true,
-    diplomat: false,
+    diploma: false,
     possession: false,
     interest: 5.5,
     max: 10000,

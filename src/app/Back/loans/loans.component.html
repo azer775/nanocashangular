@@ -27,9 +27,10 @@
             <td>{{loan.state}}</td>
             <td>{{loan.start}}</td>
             <td>{{loan.pack.name}}</td>
+            <td>{{loan.user}}</td>
             <!-- <td>{{loan.user.firstname+" "+loan.user.lastname}}</td> -->
             
-            <td><button (click)="navigateToForm(loan.id)"> modify</button></td>
+            <td><button (click)="navigateToForm(loan.id,loan.pack.id)"> modify</button></td>
         </tr>
     </tbody>
 </table>

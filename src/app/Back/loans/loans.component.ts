@@ -25,8 +25,8 @@ export class LoansComponent implements OnInit{
     this.loans =Loans
   });
   }
-  navigateToForm(id: number): void {
-    this.router.navigate(['/admin/addpack', { Data: JSON.stringify(id) }]);
+  navigateToForm(id: number,idp: number): void {
+    this.router.navigate(['/loanadd', { Data: JSON.stringify(id) , idp:JSON.stringify(idp) }]);
   }
   
   
