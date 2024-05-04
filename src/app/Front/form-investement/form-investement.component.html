@@ -1,0 +1,38 @@
+<div class="iq-card">
+  <div class="iq-card-header d-flex justify-content-between">
+    <div class="iq-header-title">
+      <h4 class="card-title">Add Investment</h4>
+    </div>
+  </div>
+  <div class="iq-card-body">
+    <form [formGroup]="investmentForm" (ngSubmit)="addInvestment()">
+      <div class="form-group">
+        <label for="amount">Amount:</label>
+        <input
+          type="number"
+          id="amount"
+          formControlName="amount"
+          class="form-control"
+        />
+      </div>
+      <div class="form-group">
+        <label for="dateInvest">Date:</label>
+        <input
+          type="date"
+          id="dateInvest"
+          formControlName="dateInvest"
+          class="form-control"
+        />
+      </div>
+      <div class="form-group">
+        <label for="projet">Project:</label>
+        <select id="projet" formControlName="projet" class="form-control">
+          <option *ngFor="let project of projet" [value]="project.idProject">
+            {{ project.projName }}
+          </option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>

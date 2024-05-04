@@ -7,7 +7,7 @@ import { Contract } from 'src/app/Models/Contract';
   providedIn: 'root'
 })
 export class ContractService {
-  private baseURL: string ="http://localhost:8082/";
+  private baseURL: string ="http://localhost:8082/spring/";
 
   constructor(private http:HttpClient) {
 
@@ -20,4 +20,9 @@ export class ContractService {
    addContract(Contract: Contract): Observable<Contract> {
       return this.http.post<Contract>(this.baseURL+"Contract/save",Contract);
    }
+   editContract(contract: Contract): Observable<Contract> {
+    return this.http.put<Contract>(this.baseURL+"Contract/edit",contract);
+   }
+   getbyid(id: number): Observable<Contract> {
+    return this.http.get<Contract>(this.baseURL+"Contract/"+id);}
 }

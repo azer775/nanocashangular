@@ -17,6 +17,16 @@ import { PacksComponent } from './Back/packs/packs.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormpackComponent } from './Back/formpack/formpack.component';
 import { FormContractComponent } from './Back/formContract/formContract.component';
+import { FormProjectComponent } from './Front/form-project/form-project.component';
+import { ContractComponent } from './Back/contract/contract.component';
+import { ProjectComponent } from './Front/project/project.component';
+import { InvestmentComponent } from './Front/investisement/investisement.component';
+import { ForminvestementComponent } from './Front/form-investement/form-investement.component';
+import { EditContractComponent } from './Back/editFormContract/editContract.component';
+
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +41,13 @@ import { FormContractComponent } from './Back/formContract/formContract.componen
     HomeComponent,
     PacksComponent,
     FormpackComponent,
-    FormContractComponent
+    FormContractComponent,
+    FormProjectComponent,
+    ForminvestementComponent,
+    ContractComponent,
+    ProjectComponent,
+    InvestmentComponent,
+    EditContractComponent,  
   ],
   imports: [
     BrowserModule,

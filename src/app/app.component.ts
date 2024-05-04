@@ -7,6 +7,7 @@ import { PackService } from './Services/pack.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  
   title = 'nanocash1';
   
 }

@@ -1,11 +1,11 @@
 <div class="iq-card">
   <div class="iq-card-header d-flex justify-content-between">
     <div class="iq-header-title">
-      <h4 class="card-title">Add Contract</h4>
+      <h4 class="card-title">Edit Contract</h4>
     </div>
   </div>
   <div class="iq-card-body">
-    <form [formGroup]="contractForm" (ngSubmit)="addContract()">
+    <form [formGroup]="contractForm" (ngSubmit)="updateContract()">
       <div class="form-group">
         <label for="nompartner">Partner Name:</label>
         <input
@@ -65,7 +65,7 @@
           class="form-control"
         />
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary">Update</button>
     </form>
   </div>
 </div>

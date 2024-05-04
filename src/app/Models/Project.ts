@@ -2,8 +2,8 @@ import { Contract } from "./Contract";
 
 export class Project {
     idProject!: number;
-    ProjName!: string;
-    Status!: boolean;
+    projName!: string;
+    status!: boolean;
     description!: string;
     CA!: number;
     CV!: number;

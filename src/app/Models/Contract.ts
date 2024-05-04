@@ -4,7 +4,7 @@ export class Contract {
     idContratct!: number;
     nompartner!: string;
     duartion!: number;
-    Amount!: number;
+    amount!: number;
     description!: string;
     typeContract!: TypeContract;
     projects!: Project;
@@ -14,11 +14,9 @@ export class Contract {
 
 
 
-
 export enum TypeContract {
-    FixedTerm = 'FixedTerm',
-    Permanent = 'Permanent',
-    Freelance = 'Freelance',
+    sponsoring = 'sponsoring',
+    partenariat = 'partenariat',
     // Add more enum values as needed
 }
 

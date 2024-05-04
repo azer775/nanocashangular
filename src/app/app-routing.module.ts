@@ -7,6 +7,17 @@ import { HomebackComponent } from './Back/homeback/homeback.component';
 import { PacksComponent } from './Back/packs/packs.component';
 import { FormpackComponent } from './Back/formpack/formpack.component';
 import { FormContractComponent } from './Back/formContract/formContract.component';
+import { FormProjectComponent } from './Front/form-project/form-project.component';
+import { ContractComponent } from './Back/contract/contract.component';
+import { ProjectComponent } from './Front/project/project.component';
+import { InvestmentComponent } from './Front/investisement/investisement.component';
+import { ForminvestementComponent } from './Front/form-investement/form-investement.component';
+import { EditContractComponent } from './Back/editFormContract/editContract.component';
+
+
+
+
+
 
 const routes: Routes = [
   { path: "",
@@ -16,6 +27,18 @@ children:[
   path: "home",
  component: HomeComponent
 
+},
+{ path: "addProject",
+component: FormProjectComponent,
+},
+{path: "addInvestment",
+component: ForminvestementComponent,
+},
+{path: "project",
+component: ProjectComponent,
+},
+{path: "investisement",
+component: InvestmentComponent,
 }
 ]
 },
@@ -34,7 +57,12 @@ children:[
 },
 { path: "addcontract",
   component: FormContractComponent
-}
+},
+{ path: "contract",
+  component: ContractComponent,
+},
+{ path: "edit-contract/:id", component: EditContractComponent } 
+
 ]
 
 }
