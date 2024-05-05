@@ -2,6 +2,7 @@ export class Pack{
     id!: number;
     bankstat!: boolean;
     cin!: boolean;
+    img!:string;
     diploma!: boolean;
     possession!: boolean;
     interest!: number;
@@ -11,6 +12,7 @@ export class Pack{
     target!: string;
     description!: string;
     name!: string;
+    [key: string]: any;
 
 
 }

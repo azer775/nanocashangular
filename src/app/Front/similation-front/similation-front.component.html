@@ -1,0 +1,68 @@
+
+  <section class="page-header">
+    <div class="page-header__bg" style="background-image: url(assets/images/backgrounds/page-header-bg-1-1.jpg);"></div>
+    <!-- /.page-header__bg -->
+    <div class="container">
+        <ul class="thm-breadcrumb list-unstyled">
+            <li><a href="index.html">Home</a></li>
+            <li>/</li>
+            <li><span>Loan Calculator</span></li>
+        </ul><!-- /.thm-breadcrumb list-unstyled -->
+        <h2>Loan Calculator</h2>
+    </div><!-- /.container -->
+</section><!-- /.page-header -->
+
+<section class="contact-two">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="loan-slider-box">
+                    <div class="loan-main-heading block-title text-left">
+                        <p class="small-title mb-0">Monthly EMI</p>
+                        <h3 class="title-block w-500">Loan Interest Calculator</h3>
+                    </div>
+
+                    <form (ngSubmit)="genererTableauAmortissement()">
+                        
+                        <div>
+                          <label for="montantEmprunte">Montant emprunté:</label>
+                          <input type="number" id="montantEmprunte" name="montantEmprunte" [(ngModel)]="montantEmprunte" class="form-control contact-one__form-input" required>
+                        </div>
+                        <div>
+                          <label for="tauxInteretAnnuel">Taux d'intérêt annuel:</label>
+                          <input type="number" id="tauxInteretAnnuel" name="tauxInteretAnnuel" [(ngModel)]="tauxInteretAnnuel" class="form-control contact-one__form-input" required>
+                        </div>
+                        <div>
+                          <label for="dureeMois">Durée en mois:</label>
+                          <input type="number" id="dureeMois" name="dureeMois" [(ngModel)]="dureeMois" class="form-control contact-one__form-input" required>
+                        </div>
+                        <button type="submit" class="thm-btn">Générer le fichier Excel</button>
+                    
+                      </form>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div id="loan-calculator-1" data-interest-rate="15" class="about-one__form">
+                <h3>How Much You Need</h3>
+                     <div class="about-one__form-content about-total-loan-form">
+                        <div class="about-total-loan-form-calculation">
+                            <p>
+                                <span>Monthly EMI</span>
+                                <b>$<i id="emi">1,309.91</i></b>
+                            </p>
+                            <p>
+                                <span>Total Interest</span>
+                                <b>$<i id="tbl_emi">57,188.72</i></b>
+                            </p>
+                            <p>
+                                <span>Total Amount Payable</span>
+                                <b>$<i id="tbl_la">157,188.72</i></b>
+                            </p>               
+                        </div>                                 
+                        <a href="apply-now.html" class="thm-btn" target="_blank" rel="nofollow">Apply For Loan</a>
+                    </div>
+                </div>
+            </div><!-- /.col-lg-5 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section>

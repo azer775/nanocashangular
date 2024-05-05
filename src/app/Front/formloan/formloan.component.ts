@@ -6,11 +6,14 @@ import { Pack } from 'src/app/Models/Pack';
 import { role, status, User } from 'src/app/Models/Userazer';
 import { LoanService } from 'src/app/Services/loan.service';
 import { Observer } from 'rxjs';
+import { CookieService } from 'ngx-cookie-service';
+import { use } from 'echarts';
 
 @Component({
   selector: 'app-formloan',
   templateUrl: './formloan.component.html',
-  styleUrls: ['./formloan.component.css']
+  styleUrls: ['./formloan.component.css'],
+  providers: [CookieService]
 })
 export class FormloanComponent implements OnInit {
   loanForm: FormGroup;
@@ -28,9 +31,10 @@ export class FormloanComponent implements OnInit {
     work: true,
     target: "Home Improvement",
     description: "Pack for home improvement loans",
-    name: "Home Improvement Pack"
+    name: "Home Improvement Pack",
+    img:""
   }; 
-   user: User = {
+   user!: User ;/*= {
      Id: 1,
      firstname: "John",
      lastname: "Doe",
@@ -42,9 +46,9 @@ export class FormloanComponent implements OnInit {
      work: "Some Work",
      role: role.Admin,
      status: status.Actif
-   };// Add a property for the selected pack
+   };*/// Add a property for the selected pack
 
-  constructor(private formBuilder: FormBuilder,private http: HttpClient, private loanService: LoanService) {
+  constructor(private formBuilder: FormBuilder,private http: HttpClient, private loanService: LoanService,private cookieService: CookieService) {
     this.loanForm = this.formBuilder.group({
       amount: [''],
       duration: [''],
@@ -92,5 +96,27 @@ export class FormloanComponent implements OnInit {
       // Form is invalid, handle validation errors or display message to user
       console.error('Loan form is invalid');
     }
+  }
+  onClick(){
+    this.loanService.getUser().subscribe((user: User) => {
+      // Handle the response here, for example, you can assign the pack to a property
+      this.user.Id = user.Id;
+    }); 
+    this.cookieService.set('User',this.user.adress );
+    console.log(this.user);
+    console.log("Success");
+  }
+  login() {
+    const userId = 1; // Change this to the desired user ID
+    this.loanService.loginUser(userId).subscribe(
+      (user: User) => {
+        console.log('Logged in user:', user);
+        // Faites quelque chose avec l'utilisateur connecté, par exemple redirigez-le vers une autre page
+      },
+      error => {
+        console.error('Error logging in:', error);
+        // Gérez les erreurs ici, par exemple affichez un message à l'utilisateur
+      }
+    );
   }
 }

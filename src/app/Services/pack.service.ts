@@ -29,4 +29,11 @@ export class PackService {
    delete(id: number): Observable<any> {
     return this.http.delete<any>(this.baseURL + "pack/delete/" + id);
   }
+  uploadFiles3(formData: FormData) {
+    return this.http.post("http://localhost:8080/pack/upload", formData);
+  }
+  updatewithFiles(formData: FormData) {
+    return this.http.put(this.baseURL+"pack/updatedwithfiles", formData);
+  }
+
 }

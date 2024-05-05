@@ -1,9 +1,9 @@
 <div>
-    <input type="text" [(ngModel)]="currentQuestion" placeholder="Posez une question...">
-    <button (click)="askQuestion()">Envoyer</button>
-  </div>
-  
-  <div *ngFor="let qa of questionsAndAnswers">
-    <p><strong>Question:</strong> {{ qa.question }}</p>
-    <p><strong>Réponse:</strong> {{ qa.response }}</p>
-  </div>
+  <input type="text" [(ngModel)]="currentQuestion" placeholder="Posez une question...">
+  <button (click)="askQuestion()">Envoyer</button>
+</div>
+
+<div *ngFor="let qa of questionsAndAnswers">
+  <p><strong>Question:</strong> {{ qa.question }}</p>
+  <p><strong>Réponse:</strong> {{ qa.response }}</p>
+</div>

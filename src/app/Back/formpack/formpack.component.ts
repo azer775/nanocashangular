@@ -27,8 +27,15 @@ export class FormpackComponent implements OnInit {
                 work: [false],
                 target: ['', Validators.required],
                 description: [''],
-                name: ['', Validators.required]
+                name: ['', Validators.required],
+                img:['', Validators.required]
               });
+            }
+            onFileChange(event: any, field: string) {
+              const files = event.target.files;
+              if (files.length > 0) {
+                this.packForm.get(field)?.setValue(files);
+              }
             }
 
             ngOnInit(): void {
@@ -62,6 +69,40 @@ export class FormpackComponent implements OnInit {
                   this.router.navigateByUrl('/admin/packs');    
             }
             
+          }
+          onSubmit() {
+    
+            const formData = new FormData();
+            const packData = this.packForm.value;
+            //loanData.idp=this.selectedPack.id;
+            Object.keys(packData).forEach(key => {
+              if (packData[key] instanceof FileList) {
+                for (let i = 0; i < packData[key].length; i++) {
+                  formData.append(key, packData[key][i]);
+                }
+              } else {
+                formData.append(key, packData[key]);
+              }
+            });
+            if(this.isEditing){
+              packData.id=this.updatedpack.id;
+              this.packService.updatewithFiles(formData).subscribe(
+                response => {
+                  console.log('Files uploaded successfully:', response);
+                },
+                error => {
+                  console.error('Error uploading files:', error);
+                }
+              );
+            }else{
+            this.packService.uploadFiles3(formData).subscribe(
+              response => {
+                console.log('Files uploaded successfully:', response);
+              },
+              error => {
+                console.error('Error uploading files:', error);
+              }
+            );}
           }
           Cancel(): void {
             this.packForm.reset();}

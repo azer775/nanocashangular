@@ -1,5 +1,5 @@
 export class User{
-    public Id!: number;
+  public Id!: number;
   public firstname!: string;
   public lastname!: string;
   public dateOfBirth!: Date;
@@ -7,8 +7,8 @@ export class User{
   public pwd!: string;
   public adress!: string;
   public region!: string;
-  public   role!: role;
-  public status!: status;
+  /*public   role!: role;
+  public status!: status;*/
   public  work!: string;
 
 }

@@ -1,40 +1,102 @@
-<form [formGroup]="loanForm" (ngSubmit)="onSubmit()">
-    <div *ngIf="selectedPack.cin">
-      <label for="cin">CIN PDF:</label>
-      <input type="file" (change)="onFileChange($event, 'cin')" id="cin">
-    </div>
-    
-    <div *ngIf="selectedPack.work">
-        <label for="work">WORK PDF:</label>
-        <input type="file" (change)="onFileChange($event, 'work')" id="work">
-    </div>
-    <div *ngIf="selectedPack.bankstat">
-        <label for="bankstat">BANK PDF:</label>
-        <input type="file" (change)="onFileChange($event, 'bankstat')" id="bankstat">
-    </div>
-    <div *ngIf="selectedPack.diploma">
-      <label for="diploma">Diploma PDF:</label>
-      <input type="file" (change)="onFileChange($event, 'diploma')" id="diploma">
-  </div>
-  <div  *ngIf="selectedPack.possession">
-    <label for="possession">possession PDF:</label>
-    <input type="file" (change)="onFileChange($event, 'possession')" id="possession">
-</div>
-  
-    <!-- Add similar divs for other file inputs -->
-  
-    <div>
-      <label for="amount">Amount:</label>
-      <input type="number" formControlName="amount" id="amount">
-    </div>
-    <div>
-      <label for="duration">Duration (in months):</label>
-      <input type="number" formControlName="duration" id="duration">
-    </div>
-    <div>
-      <label for="start">Start Date:</label>
-      <input type="date" formControlName="start" id="start">
-    </div>
-    
-    <button type="submit">Submit</button>
-  </form>
+  <section class="page-header">                               
+    <div class="page-header__bg" style="background-image: url(assets/nano/webdevcode.com/html/pylon1/assets/images/backgrounds/page-header-bg-1-1.jpg);"></div>
+    <!-- /.page-header__bg -->
+    <div class="container">
+        <ul class="thm-breadcrumb list-unstyled">
+            <li><a href="index.html">Home</a></li>
+            <li>/</li>
+            <li><span>Contact Us</span></li>
+        </ul><!-- /.thm-breadcrumb list-unstyled -->
+        <h2>Contact Us</h2>
+    </div><!-- /.container -->
+</section><!-- /.page-header -->
+<section class="contact-one">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="contact-one__content">
+                    <div class="block-title">
+                        <p class="small-title">Get in touch with us</p>
+                        <h2 class="title-block">Ask for your query</h2>
+                    </div>
+                    <div class="contact-one__box">
+                        <i class="pylon-icon-telephone"></i>
+                        <div class="contact-one__box-content">
+                            <h4>Call Anytime</h4>
+                            <a href="tel:92 666 888 000">92 666 888 0000</a>
+                        </div><!-- /.contact-one__box-content -->
+                    </div><!-- /.contact-one__box -->
+                    <div class="contact-one__box">
+                        <i class="pylon-icon-email1"></i>
+                        <div class="contact-one__box-content">
+                            <h4>Write Email</h4>
+                            <a href="mailto:needhelp@company.com">needhelpcompany.com</a>
+                        </div><!-- /.contact-one__box-content -->
+                    </div><!-- /.contact-one__box -->
+                    <div class="contact-one__box">
+                        <i class="pylon-icon-pin1"></i>
+                        <div class="contact-one__box-content">
+                            <h4>Visit Office</h4>
+                            <a href="#">80 Marktin Colvel, Broklyn, New York, USA</a>
+                        </div><!-- /.contact-one__box-content -->
+                    </div><!-- /.contact-one__box -->
+                </div><!-- /.contact-one__content -->
+            </div><!-- /.col-lg-5 -->
+            <div class="col-lg-7">
+                <form  [formGroup]="loanForm" (ngSubmit)="onSubmit()" class="contact-one__form">
+                    <div class="row low-gutters">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="number" formControlName="amount" id="amount" placeholder="amount" class="form-control contact-one__form-input"  required>
+                            </div>
+                        </div><!-- /.col-md-6 -->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="number" formControlName="duration" id="duration" placeholder="duration in months" class="form-control contact-one__form-input"  required>
+                            </div>
+                        </div><!-- /.col-md-6 -->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="date" formControlName="start" id="start" placeholder="start date" class="form-control contact-one__form-input" required>
+                            </div>
+                        </div><!-- /.col-md-6 -->
+                        <div class="col-md-6" *ngIf="selectedPack.possession">
+                            <div class="form-group">
+                              <label for="possession">possession PDF:</label>
+                                <input type="file" (change)="onFileChange($event, 'possession')" id="possession" placeholder="possession" class="form-control contact-one__form-input" >
+                            </div>
+                        </div>
+                        <div class="col-md-6" *ngIf="selectedPack.diploma">
+                          <div class="form-group">
+                            <label for="diploma">Diploma PDF:</label>
+                              <input type="file" (change)="onFileChange($event, 'diploma')" id="diploma" placeholder="diploma" class="form-control contact-one__form-input" >
+                          </div>
+                      </div>
+                      <div class="col-md-6" *ngIf="selectedPack.bankstat">
+                        <div class="form-group">
+                          <label for="bankstat">BANK PDF:</label>
+                            <input type="file" (change)="onFileChange($event, 'bankstat')" id="bankstat" placeholder="bankstat" class="form-control contact-one__form-input" >
+                        </div>
+                    </div>
+                    <div class="col-md-6" *ngIf="selectedPack.work">
+                      <div class="form-group">
+                        <label for="work">WORK PDF:</label>
+                          <input type="file" (change)="onFileChange($event, 'work')" id="work" placeholder="work" class="form-control contact-one__form-input" >
+                      </div>
+                  </div>
+                  <div class="col-md-6" *ngIf="selectedPack.cin">
+                    <div class="form-group">
+                      <label for="cin">CIN PDF:</label>
+                        <input type="file" (change)="onFileChange($event, 'cin')" id="cin" placeholder="cin" class="form-control contact-one__form-input" >
+                    </div>
+                    
+                </div><!-- /.col-md-6 -->
+                        <!-- /.col-md-6 -->
+                        
+                    </div><!-- /.row -->
+                    <button class="thm-btn" type="submit">Sublit</button>
+                </form><!-- /.contact-one__from -->
+            </div><!-- /.col-lg-7 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section><!-- /.contact-one -->

@@ -1,0 +1,43 @@
+<section class="page-header">
+    <div class="page-header__bg" style="background-image: url(assets/nano/webdevcode.com/html/pylon1/assets/images/backgrounds/page-header-bg-1-1.jpg);"></div>
+    <!-- /.page-header__bg -->
+    <div class="container">
+        <ul class="thm-breadcrumb list-unstyled">
+            <li><a href="index.html">Home</a></li>
+            <li>/</li>
+            <li><span>Service</span></li>
+        </ul><!-- /.thm-breadcrumb list-unstyled -->
+        <h2>Service</h2>
+    </div><!-- /.container -->
+</section><!-- /.page-header -->
+
+<section class="service-page pt-100 pb-60" >
+    <div class="container">
+        <div class="row" >
+            
+            <div class="col-lg-4 col-md-6 mb-40" *ngFor="let pack of packs" >
+                <div class="service-one__card">
+                    <div class="service-one__image">
+                        <a href="service-details.html">
+                            <div class="post-thumbnail">
+                                
+                                <img [src]="pack.img" alt="">
+                            </div>
+                        </a>
+                    </div><!-- /.service-one__image -->
+                    <div class="service-one__content">
+                        <a href="service-details.html">
+                            <div class="service-icon">
+                                <i class="flaticon-loan-5"></i>
+                            </div>
+                        </a>
+                        <h3><a href="service-details.html">{{pack.name}}</a></h3>
+                        <p>{{pack.description}}</p>
+                        <button (click)="navigateToFormloan(pack.id)" class="pylon-icon-right-arrow service-one__link"></button><!-- /.service-one__link -->
+                    </div><!-- /.service-one__content -->
+                </div><!-- /.service-one__card -->
+            </div><!-- /.col-lg-4 col-md-6 mb-40 -->
+        
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section>

@@ -9,6 +9,8 @@ import { FormpackComponent } from './Back/formpack/formpack.component';
 import { LoansComponent } from './Back/loans/loans.component';
 import { FormloanComponent } from './Front/formloan/formloan.component';
 import { TestfileComponent } from './testfile/testfile.component';
+import { PacksfrontComponent } from './Front/packsfront/packsfront.component';
+import { SimilationFrontComponent } from './Front/similation-front/similation-front.component';
 
 const routes: Routes = [
   { path: "",
@@ -21,6 +23,12 @@ children:[
 },
 { path: "loanadd",
   component: TestfileComponent
+},
+{ path: "packs",
+  component: PacksfrontComponent
+},
+{ path: "simulation",
+  component: SimilationFrontComponent
 }
 ]
 },

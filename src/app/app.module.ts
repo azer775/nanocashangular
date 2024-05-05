@@ -22,6 +22,12 @@ import { StatsComponent } from './Back/stats/stats.component';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { TestfileComponent } from './testfile/testfile.component';
 import { ChatComponent } from './Back/chat/chat.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
+import { CookieService } from 'ngx-cookie-service';
+import { VideocallComponent } from './videocall/videocall.component';
+import { PacksfrontComponent } from './Front/packsfront/packsfront.component';
+import { SimilationFrontComponent } from './Front/similation-front/similation-front.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +47,10 @@ import { ChatComponent } from './Back/chat/chat.component';
     FormloanComponent,
     StatsComponent,
     TestfileComponent,
-    ChatComponent
+    ChatComponent,
+    VideocallComponent,
+    PacksfrontComponent,
+    SimilationFrontComponent
   ],
   imports: [
     BrowserModule,
@@ -49,6 +58,7 @@ import { ChatComponent } from './Back/chat/chat.component';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
+    MatDialogModule,
     NgxEchartsModule.forRoot({
       /**
        * This will import all modules from echarts.
@@ -56,10 +66,12 @@ import { ChatComponent } from './Back/chat/chat.component';
        * please refer to [Custom Build] section.
        */
       echarts: () => import('echarts'), // or import('./path-to-my-custom-echarts')
-    })
+    }),
+    BrowserAnimationsModule,
+    
     
   ],
-  providers: [],
+  providers: [ CookieService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Loan } from '../Models/Loan';
 import { Observable } from 'rxjs/internal/Observable';
 import { catchError, throwError } from 'rxjs';
+import { User } from '../Models/Userazer';
 
 
 @Injectable({
@@ -73,6 +74,16 @@ export class LoanService {
 
   generateAmortizationTable1(montantEmprunte: number, tauxInteretAnnuel: number, dureeMois: number): Observable<any> {
     return this.http.get<any>(this.baseURL+"generer-tableau-amortissement1/"+montantEmprunte+"/"+tauxInteretAnnuel+"/"+dureeMois);
+  }
+  getUser(): Observable<User> {
+    return this.http.get<User>("http://localhost:8080/session/getuser");
+  }
+  loginUser(id: number): Observable<User> {
+    const body = { msg: id };
+    return this.http.post<User>("http://localhost:8080/session/login/1", body);
+  }
+  genererTableauAmortissement(montantEmprunte: number, tauxInteretAnnuel: number, dureeMois: number): Observable<Blob> {
+    return this.http.get(`${this.baseURL}down1/${montantEmprunte}/${tauxInteretAnnuel}/${dureeMois}`, { responseType: 'blob' });
   }
  
 }
