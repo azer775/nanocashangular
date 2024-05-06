@@ -12,22 +12,20 @@ import { FooterComponent } from './Back/footer/footer.component';
 import { NavbarComponent } from './Back/navbar/navbar.component';
 import { HomebackComponent } from './Back/homeback/homeback.component';
 import { HomeComponent } from './Front/home/home.component';
-import {HttpClientModule } from '@angular/common/http';
-import { PacksComponent } from './Back/packs/packs.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { FormpackComponent } from './Back/formpack/formpack.component';
-import { LoansComponent } from './Back/loans/loans.component';
-import { FormloanComponent } from './Front/formloan/formloan.component';
-import { StatsComponent } from './Back/stats/stats.component';
-import { NgxEchartsModule } from 'ngx-echarts';
-import { TestfileComponent } from './testfile/testfile.component';
-import { ChatComponent } from './Back/chat/chat.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatDialogModule } from '@angular/material/dialog';
-import { CookieService } from 'ngx-cookie-service';
-import { VideocallComponent } from './videocall/videocall.component';
-import { PacksfrontComponent } from './Front/packsfront/packsfront.component';
-import { SimilationFrontComponent } from './Front/similation-front/similation-front.component';
+import {HttpClientModule} from '@angular/common/http';
+import { ShowTransactionsComponent } from './Back/show-transactions/show-transactions.component';
+import { FormsModule } from '@angular/forms';
+import { FilterPipe } from './filter.pipe';
+import { AddTransComponent } from './Back/add-trans/add-trans.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { EditTransComponent } from './Back/edit-trans/edit-trans.component'; // Import ReactiveFormsModule
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // Required for Angular Material
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { DashboardComponent } from './Front/dashboard/dashboard.component'; // MatSnackBarModule import
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -41,37 +39,26 @@ import { SimilationFrontComponent } from './Front/similation-front/similation-fr
     NavbarComponent,
     HomebackComponent,
     HomeComponent,
-    PacksComponent,
-    FormpackComponent,
-    LoansComponent,
-    FormloanComponent,
-    StatsComponent,
-    TestfileComponent,
-    ChatComponent,
-    VideocallComponent,
-    PacksfrontComponent,
-    SimilationFrontComponent
+    FilterPipe,
+    ShowTransactionsComponent,
+    AddTransComponent,
+    EditTransComponent,
+    DashboardComponent,
+
+
+  
+  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule,
-    MatDialogModule,
-    NgxEchartsModule.forRoot({
-      /**
-       * This will import all modules from echarts.
-       * If you only need custom modules,
-       * please refer to [Custom Build] section.
-       */
-      echarts: () => import('echarts'), // or import('./path-to-my-custom-echarts')
-    }),
     BrowserAnimationsModule,
-    
-    
+    MatSnackBarModule,
+    FormsModule
   ],
-  providers: [ CookieService ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

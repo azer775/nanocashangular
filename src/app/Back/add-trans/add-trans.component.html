@@ -1,0 +1,82 @@
+<div id="content-page" class="content-page">
+    <div class="container-fluid">
+       <div class="row">
+          <div class="col-sm-20 col-lg-16">
+             </div>
+       <div class="col-lg-9">
+    <div class="iq-card">
+       <div class="iq-card-header d-flex justify-content-between">
+          <div class="iq-header-title">
+             <h4 class="card-title">Affecter une transaction</h4>
+          </div>
+          <div class="custom-file-container p-3">
+            <label for="excelFile" class="form-label">Upload Transactions File:</label>
+            <input type="file" class="form-control" id="excelFile" (change)="onFileSelected($event)">
+            <button type="button" class="btn btn-primary mt-2" (click)="addTransFromExcel()">Add Transaction from Excel</button>
+        </div>
+          
+       </div>
+       <div class="iq-card-body">
+          <div class="new-user-info">
+             <form [formGroup] ="transForm" (ngSubmit)="addTrans()" enctype="multipart/form-data">
+                <div class="row">
+                   <div class="form-group col-sm-6">
+                      <label>Methode de paiement :</label>
+                      <select class="form-control custom-input" id="methode" formControlName="methode">
+                         <option value="retrait">retrait</option>
+                         <option value="carte">Carte</option>
+                         <option value="agence">Agence</option>
+                      </select>
+                   </div>
+                   <div class="form-group col-md-6">
+                    <label for="dateTrans">Date de Transaction :</label>
+                    <input type="datetime-local" id="dateTrans" formControlName="dateTrans" class="form-control custom-input" placeholder="Date and Time of Transaction">
+                    <div *ngIf="transForm.get('dateTrans')?.errors?.['dateNotPast']" class="text-danger">
+                      La date ne doit pas dépasser la date actuelle!
+                    </div>
+                  </div>
+                  
+                  <div class="form-group col-md-6">
+                    <label for="rib_S">RIB_SOURCE:</label>
+                    <input type="number" formControlName="rib_S" class="form-control custom-input" placeholder="RIB_S">
+                    <div *ngIf="transForm.get('rib_S')?.touched && transForm.get('rib_S')?.errors?.['ribLength']" class="text-danger">
+                        RIB doit contenir exactement 8 chiffres!
+                    </div>
+                  </div>             
+                  <div class="form-group col-md-6">
+                    <label for="rib_R">RIB_RECIPIENT:</label>
+                    <input type="text" formControlName="rib_R" class="form-control custom-input" placeholder="RIB_R" [disabled]="true">
+                  </div>                  
+                   <div class="form-group col-md-6">
+                    <label for="add1">Montant :</label>
+                    <input type="number" formControlName="montant" placeholder="Montant" class="form-control custom-input">
+                 </div>
+                 <div class="form-group col-sm-6">
+                    <label>Status :</label>
+                    <select class="form-control custom-input" id="statusTr" formControlName="statusTr">
+                       <option value="APPROUVE">APPROUVE</option>
+                       <option value="REJETE">REJETE</option>
+                       <option value="EN_ATTENTE">EN_ATTENTE</option>
+                       <option value="EFFECTUE">EFFECTUE</option>
+                    </select>
+                 </div>
+                </div>
+
+                <div class="row justify-content-center">
+                   <div class="col-md-2">
+                      <button type="submit" [disabled]="transForm.invalid" class="btn btn-primary">Affecter</button>
+                   </div>
+                </div>
+
+             </form>
+          </div>
+          
+
+       </div>
+    </div>
+ </div>
+ </div>
+ 
+
+
+

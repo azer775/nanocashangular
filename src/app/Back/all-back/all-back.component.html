@@ -9,23 +9,30 @@
       <title>FinDash - Responsive Bootstrap 4 Admin Dashboard Template</title>
       <!-- Favicon -->
       
-      <link rel="shortcut icon" href="/assets/dashboard/templates.iqonic.design/findash/html/cssimages/favicon.ico" />
+      <link rel="shortcut icon" href="/assets/dashboard/templates.iqonic.design/findash/html/images/favicon.ico" />
       <!-- Bootstrap CSS -->
-      <link rel="stylesheet" href="/assets/dashboard/templates.iqonic.design/findash/html/csscss/bootstrap.min.css">
+      <link rel="stylesheet" href="/assets/dashboard/templates.iqonic.design/findash/html/css/bootstrap.min.css">
       <!-- Typography CSS -->
-      <link rel="stylesheet" href="/assets/dashboard/templates.iqonic.design/findash/html/csscss/typography.css">
+      <link rel="stylesheet" href="/assets/dashboard/templates.iqonic.design/findash/html/css/typography.css">
       <!-- Style CSS -->
-      <link rel="stylesheet" href="/assets/dashboard/templates.iqonic.design/findash/html/csscss/style.css">
+      <link rel="stylesheet" href="/assets/dashboard/templates.iqonic.design/findash/html/css/style.css">
       <!-- Responsive CSS -->
-      <link rel="stylesheet" href="/assets/dashboard/templates.iqonic.design/findash/html/csscss/responsive.css"> 
+      <link rel="stylesheet" href="/assets/dashboard/templates.iqonic.design/findash/html/css/responsive.css">
+      <!-- Full calendar -->
+      <link href='/assets/dashboard/templates.iqonic.design/findash/html/fullcalendar/core/main.css' rel='stylesheet' />
+      <link href='/assets/dashboard/templates.iqonic.design/findash/html/fullcalendar/daygrid/main.css' rel='stylesheet' />
+      <link href='/assets/dashboard/templates.iqonic.design/findash/html/fullcalendar/timegrid/main.css' rel='stylesheet' />
+      <link href='/assets/dashboard/templates.iqonic.design/findash/html/fullcalendar/list/main.css' rel='stylesheet' />
+
+      <link rel="stylesheet" href="/assets/dashboard/templates.iqonic.design/findash/html/css/flatpickr.min.css">
 
    </head>
-   <body class="sidebar-main-active left-column-fixed">
+   <body>
       <!-- loader Start -->
-       <!-- <div id="loading">
+      <!-- <div id="loading">
          <div id="loading-center">
          </div>
-      </div>  --> 
+      </div> -->
       <!-- loader END -->
       <!-- Wrapper Start -->
       <div class="wrapper">
@@ -37,19 +44,13 @@
          <!-- TOP Nav Bar END -->
          
          <!-- Page Content  -->
-         <div id="content-page" class="content-page">
-            <div class="container-fluid">
-               <div class="row">
          <router-outlet></router-outlet>
-      </div>
-   </div>   
-      </div>
+         <!-- <app-homeback></app-homeback> -->
       </div>
       <!-- Wrapper END -->
       <!-- Footer -->
       <app-footer></app-footer>
       <!-- Footer END -->
-      <app-chat></app-chat>
       <!-- color-customizer -->
        <div class="iq-colorbox color-fix">
          <div class="buy-button"> <a class="color-full" href="#"><i class="fa fa-spinner fa-spin"></i></a> </div>
@@ -86,7 +87,6 @@
        <!-- color-customizer END -->
       <!-- Optional JavaScript -->
       <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-      
       <script src="/assets/dashboard/templates.iqonic.design/findash/html/js/jquery.min.js"></script>
       <script src="/assets/dashboard/templates.iqonic.design/findash/html/js/popper.min.js"></script>
       <script src="/assets/dashboard/templates.iqonic.design/findash/html/js/bootstrap.min.js"></script>
@@ -125,6 +125,14 @@
       <script src="/assets/dashboard/templates.iqonic.design/findash/html/js/maps.js"></script>
       <!-- am worldLow JavaScript -->
       <script src="/assets/dashboard/templates.iqonic.design/findash/html/js/worldLow.js"></script>
+      <!-- Raphael-min JavaScript -->
+      <script src="/assets/dashboard/templates.iqonic.design/findash/html/js/raphael-min.js"></script>
+      <!-- Morris JavaScript -->
+      <script src="/assets/dashboard/templates.iqonic.design/findash/html/js/morris.js"></script>
+      <!-- Morris min JavaScript -->
+      <script src="/assets/dashboard/templates.iqonic.design/findash/html/js/morris.min.js"></script>
+      <!-- Flatpicker Js -->
+      <script src="/assets/dashboard/templates.iqonic.design/findash/html/js/flatpickr.js"></script>
       <!-- Style Customizer -->
       <script src="/assets/dashboard/templates.iqonic.design/findash/html/js/style-customizer.js"></script>
       <!-- Chart Custom JavaScript -->

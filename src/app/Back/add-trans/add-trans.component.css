@@ -1,0 +1,14 @@
+.custom-file-container {
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    background-color: #f8f9fa;
+}
+
+.custom-file-container .form-control {
+    border: 0;
+    margin-top: 0.5rem;
+}
+
+.custom-file-container button {
+    width: 100%;
+}

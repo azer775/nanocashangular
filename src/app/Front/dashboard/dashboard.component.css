@@ -1,0 +1,55 @@
+.powerbi-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust the height as needed */
+}
+
+.powerbi-container iframe {
+    width: 90%; /* Adjust the width as needed */
+    height: 90%; /* Adjust the height as needed */
+}
+
+
+/* Basic CSS for general alignment and formatting */
+.container {
+    width: 100%; /* Full width */
+    max-width: 1200px; /* Maximum width of the content */
+    margin: 0 auto; /* Centering the container */
+    padding: 0 15px; /* Padding on the sides */
+}
+
+.row {
+    display: flex; /* Using flexbox to align the items */
+    flex-wrap: wrap; /* Allows items to wrap in smaller screens */
+    justify-content: center; /* Center items horizontally */
+}
+
+/* Specific styles for the About Us section */
+.about-one {
+    background-color: #f9f9f9; /* Just an example background color */
+    padding: 50px 0; /* Top and bottom padding */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: adds shadow for depth */
+    margin-bottom: 30px; /* Margin at the bottom */
+}
+
+.about-one__content {
+    text-align: left; /* Aligning text to the left */
+}
+
+.feature-four__box {
+    margin-top: 20px; /* Margin top for spacing between boxes */
+}
+
+/* If you want to make it vertically centered in the viewport, additional styles are needed */
+html, body {
+    height: 100%; /* Set the height of html and body to full height */
+    margin: 0; /* Remove default margin */
+}
+
+.container {
+    display: flex; /* Flexbox for the container */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center content vertically */
+    height: 100%; /* Full height */
+}

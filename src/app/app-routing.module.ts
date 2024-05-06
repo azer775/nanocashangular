@@ -4,13 +4,10 @@ import { AllFrontComponent } from './Front/all-front/all-front.component';
 import { HomeComponent } from './Front/home/home.component';
 import { AllBackComponent } from './Back/all-back/all-back.component';
 import { HomebackComponent } from './Back/homeback/homeback.component';
-import { PacksComponent } from './Back/packs/packs.component';
-import { FormpackComponent } from './Back/formpack/formpack.component';
-import { LoansComponent } from './Back/loans/loans.component';
-import { FormloanComponent } from './Front/formloan/formloan.component';
-import { TestfileComponent } from './testfile/testfile.component';
-import { PacksfrontComponent } from './Front/packsfront/packsfront.component';
-import { SimilationFrontComponent } from './Front/similation-front/similation-front.component';
+import { ShowTransactionsComponent } from './Back/show-transactions/show-transactions.component';
+import { AddTransComponent } from './Back/add-trans/add-trans.component';
+import { EditTransComponent } from './Back/edit-trans/edit-trans.component';
+import {DashboardComponent} from './Front/dashboard/dashboard.component';
 
 const routes: Routes = [
   { path: "",
@@ -21,32 +18,24 @@ children:[
  component: HomeComponent
 
 },
-{ path: "loanadd",
-  component: TestfileComponent
+{ path: "addTrans",
+  component: AddTransComponent
 },
-{ path: "packs",
-  component: PacksfrontComponent
-},
-{ path: "simulation",
-  component: SimilationFrontComponent
-}
+{ path: 'dashboard', component: DashboardComponent }
 ]
 },
 { path: "admin",
 component: AllBackComponent,
-children:[
-{
+children:[{
   path: "dashboard",
   component: HomebackComponent
+},{
+  path:"showTransactions",
+  component:ShowTransactionsComponent
 },
-{ path: "packs",
-  component: PacksComponent
-},
-{ path: "addpack",
-  component: FormpackComponent
-},
-{ path: "loans",
-  component: LoansComponent
+{
+  path: "editTrans/:id",
+  component: EditTransComponent
 }
 ]
 
